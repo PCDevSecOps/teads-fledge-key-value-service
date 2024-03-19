@@ -27,6 +27,7 @@ resource "aws_security_group" "elb_security_group" {
     Name        = "${var.service}-${var.environment}-elb-sg"
     service     = var.service
     environment = var.environment
+    yor_trace   = "66ca8868-c6ba-4866-a086-e81f0a3d9e22"
   }
 }
 
@@ -39,6 +40,7 @@ resource "aws_security_group" "ssh_security_group" {
     Name        = "${var.service}-${var.environment}-ssh-sg"
     service     = var.service
     environment = var.environment
+    yor_trace   = "8b3265ec-55fa-478f-87eb-2c7c9a8de1d6"
   }
 }
 
@@ -51,6 +53,7 @@ resource "aws_security_group" "instance_security_group" {
     Name        = "${var.service}-${var.environment}-instance-sg"
     service     = var.service
     environment = var.environment
+    yor_trace   = "2c9f1a0e-36e7-4a4d-8a70-a08b97f40bcb"
   }
 }
 
@@ -63,5 +66,6 @@ resource "aws_security_group" "vpce_security_group" {
     Name        = "${var.service}-${var.environment}-vpce-sg"
     service     = var.service
     environment = var.environment
+    yor_trace   = "6b05d626-c653-4540-877a-143885e8b836"
   }
 }

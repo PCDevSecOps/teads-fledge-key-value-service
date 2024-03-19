@@ -36,6 +36,9 @@ data "aws_iam_policy_document" "ssh_users_group_policy_doc" {
 resource "aws_iam_policy" "ssh_users_group_policy" {
   name   = format("%s-%s-sshUsersGroupPolicy", var.service, var.environment)
   policy = data.aws_iam_policy_document.ssh_users_group_policy_doc.json
+  tags = {
+    yor_trace = "ef14c1cc-e74c-417b-aa95-556e1bc299c9"
+  }
 }
 
 resource "aws_iam_group_policy_attachment" "ssh_users_group_access" {

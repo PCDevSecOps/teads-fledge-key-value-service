@@ -39,6 +39,7 @@ resource "aws_iam_role" "instance_role" {
     Name        = format("%s-%s-InstanceRole", var.service, var.environment)
     service     = var.service
     environment = var.environment
+    yor_trace   = "83669667-5c0f-48f7-aa58-3160937f55fe"
   }
 }
 
@@ -50,6 +51,7 @@ resource "aws_iam_instance_profile" "instance_profile" {
     Name        = format("%s-%s-InstanceProfile", var.service, var.environment)
     service     = var.service
     environment = var.environment
+    yor_trace   = "b74ab95e-0bad-48a8-81ec-d8a5611c01fe"
   }
 }
 
@@ -64,6 +66,7 @@ resource "aws_iam_role" "ssh_instance_role" {
     Name        = format("%s-%s-sshInstanceRole", var.service, var.environment)
     service     = var.service
     environment = var.environment
+    yor_trace   = "616d1cf0-9f74-4d92-bdf9-28742551643f"
   }
 }
 
@@ -75,6 +78,7 @@ resource "aws_iam_instance_profile" "ssh_instance_profile" {
     Name        = format("%s-%s-sshInstanceProfile", var.service, var.environment)
     service     = var.service
     environment = var.environment
+    yor_trace   = "8f28c4fc-4c19-437a-99ae-004252817831"
   }
 }
 
@@ -103,5 +107,6 @@ resource "aws_iam_role" "lambda_role" {
     Name        = format("%s-%s-LambdaRole", var.service, var.environment)
     service     = var.service
     environment = var.environment
+    yor_trace   = "0f56f028-8747-469b-97cd-960f665487ae"
   }
 }

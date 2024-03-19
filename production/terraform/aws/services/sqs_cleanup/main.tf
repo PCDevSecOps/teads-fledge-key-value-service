@@ -26,6 +26,7 @@ resource "aws_lambda_function" "sqs_cleanup_function" {
     Name        = "${var.service}-${var.environment}-sqs-cleanup"
     service     = var.service
     environment = var.environment
+    yor_trace   = "62d2b66d-d6dd-4c10-9533-5cc53fc55f27"
   }
 }
 
@@ -42,6 +43,7 @@ resource "aws_cloudwatch_event_rule" "sqs_cleanup_schedule" {
     Name        = "${var.service}-${var.environment}-sqs-cleanup-schedule"
     service     = var.service
     environment = var.environment
+    yor_trace   = "fd02a651-e91f-4d5a-be4c-86686d52cfd6"
   }
 }
 

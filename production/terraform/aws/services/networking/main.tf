@@ -28,6 +28,7 @@ resource "aws_vpc" "vpc" {
     Name        = "${var.service}-${var.environment}-vpc"
     service     = var.service
     environment = var.environment
+    yor_trace   = "4f036c47-69ad-4c19-a322-5c6bce298275"
   }
 }
 
@@ -48,6 +49,7 @@ resource "aws_subnet" "public_subnet" {
     Name        = "${var.service}-${var.environment}-public-subnet${count.index}"
     service     = var.service
     environment = var.environment
+    yor_trace   = "5215e4d7-c88e-463b-abb0-9c7765b52de7"
   }
 }
 
@@ -63,6 +65,7 @@ resource "aws_subnet" "private_subnet" {
     Name        = "${var.service}-${var.environment}-private-subnet${count.index}"
     service     = var.service
     environment = var.environment
+    yor_trace   = "1177975f-7fee-430f-b7d2-f036b63932ca"
   }
 }
 
@@ -74,6 +77,7 @@ resource "aws_internet_gateway" "igw" {
     Name        = "${var.service}-${var.environment}-igw"
     service     = var.service
     environment = var.environment
+    yor_trace   = "68b28740-1c91-4ab2-af24-49d911c9903f"
   }
 }
 
@@ -84,6 +88,7 @@ resource "aws_route_table" "public_rt" {
     Name        = "${var.service}-${var.environment}-public-rt"
     service     = var.service
     environment = var.environment
+    yor_trace   = "676fcad0-0ae5-4f83-9d29-4b6e5559ceaa"
   }
 }
 
@@ -112,6 +117,7 @@ resource "aws_route_table" "private_rt" {
     Name        = "${var.service}-${var.environment}-private-rt${count.index}"
     service     = var.service
     environment = var.environment
+    yor_trace   = "608af5a8-f393-4a0f-af2d-49db3a8ae7f0"
   }
 }
 

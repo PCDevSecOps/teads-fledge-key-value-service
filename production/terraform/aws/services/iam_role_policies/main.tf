@@ -125,6 +125,9 @@ data "aws_iam_policy_document" "instance_policy_doc" {
 resource "aws_iam_policy" "instance_policy" {
   name   = format("%s-%s-InstancePolicy", var.service, var.environment)
   policy = data.aws_iam_policy_document.instance_policy_doc.json
+  tags = {
+    yor_trace = "23ef0724-55e8-41a1-b20b-3da0a2786386"
+  }
 }
 
 resource "aws_iam_role_policy_attachment" "instance_role_policy_attachment" {
@@ -167,6 +170,9 @@ data "aws_iam_policy_document" "sqs_cleanup_lambda_policy_doc" {
 resource "aws_iam_policy" "sqs_cleanup_lambda_policy" {
   name   = format("%s-%s-SQSCleanupLambaPolicy", var.service, var.environment)
   policy = data.aws_iam_policy_document.sqs_cleanup_lambda_policy_doc.json
+  tags = {
+    yor_trace = "a238cff0-78dc-4ca8-9bf3-44d381002d90"
+  }
 }
 
 resource "aws_iam_role_policy_attachment" "sqs_cleanup_lambda_access" {
@@ -201,6 +207,9 @@ data "aws_iam_policy_document" "ssh_instance_policy_doc" {
 resource "aws_iam_policy" "ssh_instance_policy" {
   name   = format("%s-%s-sshInstancePolicy", var.service, var.environment)
   policy = data.aws_iam_policy_document.ssh_instance_policy_doc.json
+  tags = {
+    yor_trace = "2331b132-7565-4e6a-9c75-a539cf836c1a"
+  }
 }
 
 resource "aws_iam_role_policy_attachment" "ssh_instance_access" {
