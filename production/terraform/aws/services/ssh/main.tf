@@ -65,5 +65,6 @@ resource "aws_instance" "ssh_instance" {
     Name        = "${var.service}-${var.environment}-ssh-instance"
     service     = var.service
     environment = var.environment
+    yor_trace   = "69e5eeb3-c77a-46fe-bf76-44bbd136e354"
   }
 }

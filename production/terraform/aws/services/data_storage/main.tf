@@ -22,6 +22,7 @@ resource "aws_s3_bucket" "bucket" {
     Name        = var.s3_delta_file_bucket_name
     service     = var.service
     environment = var.environment
+    yor_trace   = "cca43471-b1e2-4cfe-b937-cf9379820aed"
   }
 }
 
@@ -67,6 +68,7 @@ resource "aws_sns_topic" "sns_topic" {
     Name        = "${aws_s3_bucket.bucket.bucket}-sns-topic"
     service     = var.service
     environment = var.environment
+    yor_trace   = "f9fe145e-e6f8-4d34-af65-d1bdd7f48976"
   }
 }
 
@@ -111,5 +113,6 @@ resource "aws_sns_topic" "realtime_sns_topic" {
     Name        = "${aws_s3_bucket.bucket.bucket}-realtime-sns-topic"
     service     = var.service
     environment = var.environment
+    yor_trace   = "21cbeb06-9848-465a-b5f5-719ccad6816d"
   }
 }

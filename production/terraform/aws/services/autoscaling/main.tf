@@ -58,6 +58,9 @@ resource "aws_launch_template" "instance_launch_template" {
       shard-num   = var.shard_num
     }
   }
+  tags = {
+    yor_trace = "d5823400-d545-489e-93d5-6d59cff6c177"
+  }
 }
 
 # Create auto scaling group for EC2 instances

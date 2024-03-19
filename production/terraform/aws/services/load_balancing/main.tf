@@ -29,6 +29,7 @@ resource "aws_lb" "public_alb" {
     Name        = "${var.service}-${var.environment}-public-alb"
     service     = var.service
     environment = var.environment
+    yor_trace   = "5751a962-d9c4-4475-a025-11cdf7bb5ba1"
   }
 }
 
@@ -101,6 +102,7 @@ resource "aws_lb_target_group" "alb_http1_target_group" {
     Name        = "${var.service}-${var.environment}-alb-http1-tg"
     service     = var.service
     environment = var.environment
+    yor_trace   = "beffa2ec-5c44-450e-9791-850a41b3bd07"
   }
 }
 
@@ -125,6 +127,7 @@ resource "aws_lb_target_group" "alb_http2_target_group" {
     Name        = "${var.service}-${var.environment}-alb-http2-tg"
     service     = var.service
     environment = var.environment
+    yor_trace   = "8e3d3777-d890-4ad0-9887-95e20f48a1e9"
   }
 }
 
@@ -149,6 +152,7 @@ resource "aws_lb_target_group" "alb_grpc_target_group" {
     Name        = "${var.service}-${var.environment}-alb-grpc-tg"
     service     = var.service
     environment = var.environment
+    yor_trace   = "a4c5742a-37f1-41d6-b6e9-37f166b8e5d5"
   }
 }
 

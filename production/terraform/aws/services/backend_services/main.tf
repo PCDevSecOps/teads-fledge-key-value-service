@@ -48,6 +48,7 @@ resource "aws_vpc_endpoint" "vpc_gateway_endpoint" {
     Name        = "${var.service}-${var.environment}-${each.key}-endpoint"
     service     = var.service
     environment = var.environment
+    yor_trace   = "8895e8aa-af6e-4713-bdb0-fc1ca4c2012f"
   }
 }
 
@@ -77,5 +78,6 @@ resource "aws_vpc_endpoint" "vpc_interface_endpoint" {
     Name        = "${var.service}-${var.environment}-${each.key}-endpoint"
     service     = var.service
     environment = var.environment
+    yor_trace   = "8c5a93e3-3556-476a-9c64-b2afbd910544"
   }
 }
